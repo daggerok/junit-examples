@@ -1,0 +1,7 @@
+= junit-examples image:https://travis-ci.org/daggerok/junit-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/junit-examples"]
+
+.run
+----
+./gradlew
+./mvnw
+----
