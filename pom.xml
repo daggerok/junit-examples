@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>daggerok</groupId>
+  <artifactId>junit-examples</artifactId>
+  <version>0.0.1</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jdk.version>1.8</jdk.version>
+    <kotlin.version>1.2.20</kotlin.version>
+    <slf4j.version>1.7.25</slf4j.version>
+    <junit.jupiter.version>5.0.2</junit.jupiter.version>
+    <junit.platform.version>1.0.2</junit.platform.version>
+  </properties>
+
+  <modules>
+    <module>calculator</module>
+  </modules>
+
+  <dependencies>
+    <!-- Lombok annotations -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.16.18</version>
+      <optional>true</optional>
+      <scope>provided</scope>
+    </dependency>
+    <!-- @Slf4j required dependencies and some logging configuration, such as logback.xml -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jul-to-slf4j</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>log4j-over-slf4j</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+
+    <!-- kotlin + testing -->
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>${kotlin.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-test-junit</artifactId>
+      <version>${kotlin.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- junit 5 -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-launcher</artifactId>
+      <version>${junit.platform.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- To avoid compiler warnings about @API annotations in JUnit code -->
+    <dependency>
+      <groupId>org.apiguardian</groupId>
+      <artifactId>apiguardian-api</artifactId>
+      <version>1.0.0</version>
+      <scope>test</scope>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <defaultGoal>clean package</defaultGoal>
+  </build>
+
+</project>
