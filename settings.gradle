@@ -1,2 +1,3 @@
 rootProject.name = "junit-examples"
-include "calculator"
+include(":calculator")
+include(":calculator-junit-4-tests")

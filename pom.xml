@@ -11,7 +11,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jdk.version>1.8</jdk.version>
+    <java.version>1.8</java.version>
     <kotlin.version>1.2.20</kotlin.version>
     <slf4j.version>1.7.25</slf4j.version>
     <junit.jupiter.version>5.0.2</junit.jupiter.version>
@@ -20,6 +20,7 @@
 
   <modules>
     <module>calculator</module>
+    <module>calculator-junit-4-tests</module>
   </modules>
 
   <dependencies>
@@ -79,6 +80,13 @@
       <version>${junit.jupiter.version}</version>
       <scope>test</scope>
     </dependency>
+    <!-- for junit 4 -->
+    <dependency>
+      <groupId>org.junit.vintage</groupId>
+      <artifactId>junit-vintage-engine</artifactId>
+      <version>4.12.3</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>org.junit.platform</groupId>
       <artifactId>junit-platform-launcher</artifactId>
@@ -97,6 +105,18 @@
 
   <build>
     <defaultGoal>clean package</defaultGoal>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 
 </project>

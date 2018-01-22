@@ -29,7 +29,7 @@ allprojects {
   group "daggerok"
   version "0.0.1"
 
-  defaultTasks "clean", "build"
+  defaultTasks("clean", "build")
 }
 
 subprojects {
@@ -53,27 +53,28 @@ subprojects {
 
   dependencies {
 
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
-        // @Slf4j
-        "org.slf4j:slf4j-api:$slf4jVersion",
-        "org.slf4j:jul-to-slf4j:$slf4jVersion",
-        "org.slf4j:log4j-over-slf4j:$slf4jVersion",
-        "ch.qos.logback:logback-classic:1.2.3"
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
+    // @Slf4j
+    compile("org.slf4j:slf4j-api:$slf4jVersion")
+    compile("org.slf4j:jul-to-slf4j:$slf4jVersion")
+    compile("org.slf4j:log4j-over-slf4j:$slf4jVersion")
+    compile("ch.qos.logback:logback-classic:1.2.3")
 
-    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    compileOnly("org.projectlombok:lombok:$lombokVersion")
 
     // junit 5
-    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion",
-        // hamcrest asserts, like: assertThat
-        "org.hamcrest:hamcrest-core:1.3"
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
+    // hamcrest asserts, like: assertThat
+    testImplementation("org.hamcrest:hamcrest-core:1.3")
 
-    testRuntime "org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion",
-        "org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion",
-        // IDEA (older bundle):
-        "org.junit.platform:junit-platform-launcher:$junitPlatformVersion"
+    testRuntime("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
+    testRuntime("org.junit.vintage:junit-vintage-engine:4.12.3")
+    // IDEA (older bundle):
+    testRuntime("org.junit.platform:junit-platform-launcher:$junitPlatformVersion")
 
-    testCompileOnly "org.apiguardian:apiguardian-api:1.0.0",
-        "org.projectlombok:lombok:$lombokVersion"
+    testCompileOnly("org.apiguardian:apiguardian-api:1.0.0")
+    testCompileOnly("org.projectlombok:lombok:$lombokVersion")
   }
 
   publishing {

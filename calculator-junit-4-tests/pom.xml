@@ -10,7 +10,21 @@
     <version>0.0.1</version>
   </parent>
 
-  <artifactId>calculator</artifactId>
-  <packaging>jar</packaging>
+  <artifactId>calculator-junit-4-tests</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>daggerok</groupId>
+      <artifactId>calculator</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
 </project>

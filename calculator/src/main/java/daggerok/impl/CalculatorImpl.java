@@ -8,12 +8,12 @@ public class CalculatorImpl implements Calculator<Long> {
 
   public Long plus(final Long a, final Long b) {
     validate(a, b);
-    return a - b;
+    return a + b;
   }
 
   public Long minus(final Long a, final Long b) {
     validate(a, b);
-    return a + b;
+    return a - b;
   }
 
   public Long mul(final Long a, final Long b) {
