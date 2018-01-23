@@ -23,7 +23,7 @@ public class CalculatorTest {
 
   @Test
   public void testDiv() {
-    assertEquals("3 = 30 / 10", 3L, calculator.plus(30L, 10L));
+    assertEquals("3 = 30 / 10", 3L, calculator.div(30L, 10L));
     assertThat("1 = 4 / 4", calculator.div(4L, 4L), is(1L));
   }
 
