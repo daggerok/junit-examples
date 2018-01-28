@@ -19,6 +19,7 @@
       <version>0.0.1</version>
     </dependency>
 
+    <!-- junit 4 -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

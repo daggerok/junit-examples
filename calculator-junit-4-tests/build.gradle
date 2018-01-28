@@ -1,4 +1,5 @@
 dependencies {
-  compile(project(":calculator"))
-  testCompile("junit:junit:4.12")
+  compile project(":calculator")
+  testCompile "junit:junit:4.12"
+  testImplementation "org.hamcrest:hamcrest-core:1.3"
 }
